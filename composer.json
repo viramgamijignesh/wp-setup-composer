@@ -1,0 +1,35 @@
+{
+    "name": "lenovo/word-press-composer-starter",
+    "description": "WordPress Composer Starter repository for quick-starting WordPress projects",   
+    "authors": [
+        {
+            "name": "Jignesh Viramgami",
+            "email": "jignesh.v@amrytt.com"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress": "6.7",
+        "vlucas/phpdotenv": "^5.6",
+         "wpackagist-plugin/wordpress-seo": "*",
+         "wpackagist-theme/twentyseventeen": "*"
+    },
+    "config": {
+        "allow-plugins": {
+            "johnpbloch/wordpress-core-installer": true,
+            "composer/installers": true
+        }
+    },
+    "extra": {
+        "wordpress-install-dir": "public/wordpress",
+        "installer-paths": {
+            "public/wp-content/plugins/{$name}": ["type:wordpress-plugin"],
+            "public/wp-content/themes/{$name}": ["type:wordpress-theme"]
+        }
+    },
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+    ]
+}
